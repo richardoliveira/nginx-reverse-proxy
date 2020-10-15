@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  node1:
+    build: ./node1
+    container_name: node1
+    ports:
+      - 3001:3000
+
+  node2:
+    build: ./node2
+    container_name: node2
+    ports:
+      - 3002:3000
+
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    ports:
+      - 8080:80
